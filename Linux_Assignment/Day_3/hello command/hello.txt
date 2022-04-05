@@ -1,0 +1,82 @@
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ touch h1.sh
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ ls
+2file.txt     Hello.sh       folder1/  paliendrome.txt  temp/
+CIC-489.git/  codin/         folder2/  rosefile.txt     test1/
+Hello.class   codingclub/    h1.sh     sum.sh           test2/
+Hello.java    firstfile.txt  pali1.sh  sum1.txt.txt     test3/
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ nano h1.sh
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ ./h1.sh
+./h1.sh: line 1: hello: command not found
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ ls
+2file.txt     Hello.sh       folder1/  paliendrome.txt  temp/
+CIC-489.git/  codin/         folder2/  rosefile.txt     test1/
+Hello.class   codingclub/    h1.sh     sum.sh           test2/
+Hello.java    firstfile.txt  pali1.sh  sum1.txt.txt     test3/
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1852    1808    1852      11516  pty0      197611 15:50:02 /usr/bin/ps
+     1808    1807    1808       6444  pty0      197611 15:44:30 /usr/bin/bash
+     1807       1    1807       6232  ?         197611 15:44:30 /usr/bin/mintty
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ ps -ef
+     UID     PID    PPID  TTY        STIME COMMAND
+  DEEPAK    1856    1808 pty0     15:50:11 /usr/bin/ps
+  DEEPAK    1808    1807 pty0     15:44:30 /usr/bin/bash
+  DEEPAK    1807       1 ?        15:44:30 /usr/bin/mintty
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ ps gv
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1860    1808    1860       6800  pty0      197611 15:51:07 /usr/bin/ps
+     1808    1807    1808       6444  pty0      197611 15:44:30 /usr/bin/bash
+     1807       1    1807       6232  ?         197611 15:44:30 /usr/bin/mintty
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ nano h1.sh
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ ./h1.sh
+hello
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1808    1807    1808       6444  pty0      197611 15:44:30 /usr/bin/bash
+     1880    1808    1880       4544  pty0      197611 15:55:42 /usr/bin/ps
+     1807       1    1807       6232  ?         197611 15:44:30 /usr/bin/mintty
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ ls
+2file.txt     Hello.sh       folder1/  paliendrome.txt  temp/
+CIC-489.git/  codin/         folder2/  rosefile.txt     test1/
+Hello.class   codingclub/    h1.sh*    sum.sh           test2/
+Hello.java    firstfile.txt  pali1.sh  sum1.txt.txt     test3/
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1808    1807    1808       6444  pty0      197611 15:44:30 /usr/bin/bash
+     1888    1808    1888      13336  pty0      197611 15:56:59 /usr/bin/ps
+     1807       1    1807       6232  ?         197611 15:44:30 /usr/bin/mintty
+
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ ps -ef
+     UID     PID    PPID  TTY        STIME COMMAND
+  DEEPAK    2105    1808 pty0     16:09:47 /usr/bin/ps
+  DEEPAK    1808    1807 pty0     15:44:30 /usr/bin/bash
+  DEEPAK    1807       1 ?        15:44:30 /usr/bin/mintty
+
+

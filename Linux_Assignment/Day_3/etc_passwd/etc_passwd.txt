@@ -1,0 +1,146 @@
+moni@moni-VirtualBox:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+syslog:x:104:108::/home/syslog:/bin/false
+_apt:x:105:65534::/nonexistent:/bin/false
+messagebus:x:106:110::/var/run/dbus:/bin/false
+uuidd:x:107:111::/run/uuidd:/bin/false
+lightdm:x:108:114:Light Display Manager:/var/lib/lightdm:/bin/false
+whoopsie:x:109:117::/nonexistent:/bin/false
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+avahi:x:111:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+colord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/bin/false
+speech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/false
+hplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+kernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+pulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+rtkit:x:118:126:RealtimeKit,,,:/proc:/bin/false
+saned:x:119:127::/var/lib/saned:/bin/false
+usbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+moni:x:1000:1000:moni,,,:/home/moni:/bin/bash
+
+moni@moni-VirtualBox:~$ cut -d: -f1,3,4 /etc/passwd | tr ':' '\t'
+root	0	0
+daemon	1	1
+bin	2	2
+sys	3	3
+sync	4	65534
+games	5	60
+man	6	12
+lp	7	7
+mail	8	8
+news	9	9
+uucp	10	10
+proxy	13	13
+www-data	33	33
+backup	34	34
+list	38	38
+irc	39	39
+gnats	41	41
+nobody	65534	65534
+systemd-timesync	100	102
+systemd-network	101	103
+systemd-resolve	102	104
+systemd-bus-proxy	103	105
+syslog	104	108
+_apt	105	65534
+messagebus	106	110
+uuidd	107	111
+lightdm	108	114
+whoopsie	109	117
+avahi-autoipd	110	119
+avahi	111	120
+dnsmasq	112	65534
+colord	113	123
+speech-dispatcher	114	29
+hplip	115	7
+kernoops	116	65534
+pulse	117	124
+rtkit	118	126
+saned	119	127
+usbmux	120	46
+moni	1000	1000
+
+moni@moni-VirtualBox:~$ awk -F ':' '$3>1000 {print "valid user :"$1", "$3}' /etc/passwd
+valid user :nobody, 65534
+
+moni@moni-VirtualBox:~$ awk -F":" '{print $6}' /etc/passwd | sort
+/
+/bin
+/bin
+/bin
+/dev
+/home/moni
+/home/syslog
+/nonexistent
+/nonexistent
+/nonexistent
+/proc
+/root
+/run/systemd
+/run/systemd
+/run/systemd/netif
+/run/systemd/resolve
+/run/uuidd
+/usr/games
+/usr/sbin
+/var/backups
+/var/cache/man
+/var/lib/avahi-autoipd
+/var/lib/colord
+/var/lib/gnats
+/var/lib/lightdm
+/var/lib/misc
+/var/lib/saned
+/var/lib/usbmux
+/var/list
+/var/mail
+/var/run/avahi-daemon
+/var/run/dbus
+/var/run/hplip
+/var/run/ircd
+/var/run/pulse
+/var/run/speech-dispatcher
+/var/spool/lpd
+/var/spool/news
+/var/spool/uucp
+/var/www
+
+moni@moni-VirtualBox:~$ ls -l
+total 44
+drwxr-xr-x 2 moni moni 4096 Apr  4 15:15 Desktop
+drwxr-xr-x 2 moni moni 4096 Apr  1 01:31 Documents
+drwxr-xr-x 3 moni moni 4096 Apr  4 16:06 Downloads
+-rw-r--r-- 1 moni moni 8980 Apr  1 01:22 examples.desktop
+drwxr-xr-x 2 moni moni 4096 Apr  1 01:31 Music
+drwxr-xr-x 2 moni moni 4096 Apr  5 02:11 Pictures
+drwxr-xr-x 2 moni moni 4096 Apr  1 01:31 Public
+drwxr-xr-x 2 moni moni 4096 Apr  1 01:31 Templates
+drwxr-xr-x 2 moni moni 4096 Apr  1 01:31 Videos
+moni@moni-VirtualBox:~$ cat /etc/passwd | grep moni
+moni:x:1000:1000:moni,,,:/home/moni:/bin/bash
+
+moni@moni-VirtualBox:~$ awk -F ':' '$3>1000 {print "valid user :"$1", "$3}' /etc/passwd | ls -l /etc/passwd | cat /etc/passwd | grep moni
+moni:x:1000:1000:moni,,,:/home/moni:/bin/bash
+moni@moni-VirtualBox:~$

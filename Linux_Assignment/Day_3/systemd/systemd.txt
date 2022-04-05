@@ -1,0 +1,35 @@
+moni@moni-VirtualBox:/etc$ cd ..
+moni@moni-VirtualBox:/$ ls
+bin    dev   initrd.img      lib64       mnt   root  snap  tmp  vmlinuz
+boot   etc   initrd.img.old  lost+found  opt   run   srv   usr
+cdrom  home  lib             media       proc  sbin  sys   var
+moni@moni-VirtualBox:/$ cd var/log/
+moni@moni-VirtualBox:/var/log$ ls
+alternatives.log  dmesg            installer            upstart
+apt               dpkg.log         kern.log             wtmp
+auth.log          faillog          lastlog              Xorg.0.log
+bootstrap.log     fontconfig.log   lightdm              Xorg.0.log.old
+btmp              fsck             speech-dispatcher
+cups              gpu-manager.log  syslog
+dist-upgrade      hp               unattended-upgrades
+moni@moni-VirtualBox:/var/log$ grep -n -c "systemd" /var/log/*.log
+/var/log/alternatives.log:0
+/var/log/auth.log:23
+/var/log/bootstrap.log:39
+/var/log/dpkg.log:165
+/var/log/fontconfig.log:0
+/var/log/gpu-manager.log:0
+/var/log/kern.log:6
+/var/log/Xorg.0.log:1
+
+moni@moni-VirtualBox:/var/log$ grep -n -c -i "systemd" /var/log/*.log
+/var/log/alternatives.log:0
+/var/log/auth.log:23
+/var/log/bootstrap.log:39
+/var/log/dpkg.log:165
+/var/log/fontconfig.log:0
+/var/log/gpu-manager.log:0
+/var/log/kern.log:6
+/var/log/Xorg.0.log:1
+moni@moni-VirtualBox:/var/log$ 
+

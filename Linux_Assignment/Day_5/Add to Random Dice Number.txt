@@ -1,0 +1,26 @@
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ nano random.sh
+
+#! /bin/bash
+
+echo "enter the dice number1"
+read  dice1
+
+echo "enter the dice number2"
+read  dice2
+
+     sum=$((dice1+dice2))
+echo "sum of $dice1 + $dice2: "$sum
+
+
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$ ./random.sh
+enter the dice number1
+5
+enter the dice number2
+5
+sum of 5 + 5: 10
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/CIC-489
+$
