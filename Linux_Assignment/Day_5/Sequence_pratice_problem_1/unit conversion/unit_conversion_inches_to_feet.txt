@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo "enter a number to be converted"
+
+read number
+
+feet=$(($number*12))
+
+inches=$(($number/12))
+
+echo "feet conversion to inches=" $feet
+
+echo "inches conversion to feet=" $inches
+
+
+
+
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ nano unitconversion.sh
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./unitconversion.sh
+enter a number to be converted
+42
+feet conversion to inches= 504
+inches conversion to feet= 3
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$
+

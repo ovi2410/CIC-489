@@ -1,0 +1,95 @@
+Write a Program to generate a birth month of 50 individuals between the
+year 92 & 93. Find all the individuals having birthdays in the same month.
+Store it to finally print.
+
+#! /bin/bash -x
+declare -A birthDate
+declare -a monthArray
+NUMBER_OF_PEOPLE=50
+
+#Months between 92 and 93 are total 24 months but since
+#total number of identical month is 12
+TOTAL_MONTH_IN_YEAR=12
+
+numberOfPeopleInSameMonth=0;
+monthValue='';
+
+monthArray[0]='Jan'
+monthArray[1]='Feb'
+monthArray[2]='March'
+monthArray[3]='April'
+monthArray[4]='May'
+monthArray[5]='June'
+monthArray[6]='July'
+monthArray[7]='August'
+monthArray[8]='September'
+monthArray[9]='October'
+monthArray[10]='November'
+monthArray[11]='December'
+
+while [ $NUMBER_OF_PEOPLE -gt 0 ]
+do
+        randomMonth=$((RANDOM%$TOTAL_MONTH_IN_YEAR))
+        echo $randomMonth
+
+        monthValue=${monthArray[$randomMonth]}
+        numberOfPeopleInSameMonth=`echo ${birthDate[$monthValue]} | awk -F: '{ print $2 }'`
+        numberOfPeopleInSameMonth=`echo $numberOfPeopleInSameMonth | awk -F} '{ print $1 }'`
+        echo $numberOfPeopleInSameMonth
+        numberOfPeopleInSameMonth=$(($numberOfPeopleInSameMonth+1))
+        echo '{'$monthValue ':' $numberOfPeopleInSameMonth'}'
+        birthDate[$monthValue]=`echo '{'$monthValue ':' $numberOfPeopleInSameMonth'}'`
+
+((NUMBER_OF_PEOPLE--))
+done
+
+echo ${birthDate[@]}
+#echo ${!birthDate[@]}
+#echo ${#birthDate[@]}
+
+
+ouptut
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./birthdate.sh
++ declare -A birthDate
++ declare -a monthArray
++ NUMBER_OF_PEOPLE=50
++ TOTAL_MONTH_IN_YEAR=12
++ numberOfPeopleInSameMonth=0
++ monthValue=
++ monthArray[0]=Jan
++ monthArray[1]=Feb
++ monthArray[2]=March
++ monthArray[3]=April
++ monthArray[4]=May
++ monthArray[5]=June
++ monthArray[6]=July
++ monthArray[7]=August
++ monthArray[8]=September
++ monthArray[9]=October
++ monthArray[10]=November
++ monthArray[11]=December
++ '[' 50 -gt 0 ']'
++ randomMonth=10
++ echo 10
+10
++ monthValue=November
+++ echo
+++ awk -F: '{ print $2 }'
++ numberOfPeopleInSameMonth=
+++ echo
+++ awk '-F}' '{ print $1 }'
++ numberOfPeopleInSameMonth=
++ echo
+
++ numberOfPeopleInSameMonth=1
++ echo '{November' : '1}'
+{November : 1}
+++ echo '{November' : '1}'
++ birthDate[$monthValue]='{November : 1}'
++ (( NUMBER_OF_PEOPLE-- ))
++ '[' 49 -gt 0 ']'
++ randomMonth=10
++ echo 10
+10

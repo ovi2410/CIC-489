@@ -1,0 +1,53 @@
+
+#!/bin/bash
+
+num1=$(( ( RANDOM % 6 ) + 1 ))
+echo "$num1"
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ nano random1to6.sh
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./random1to6.sh
+2
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./random1to6.sh
+1
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./random1to6.sh
+2
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./random1to6.sh
+5
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./random1to6.sh
+1
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./random1to6.sh
+4
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./random1to6.sh
+6
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./random1to6.sh
+2
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./random1to6.sh
+5
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./random1to6.sh
+4
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./random1to6.sh
+6
+

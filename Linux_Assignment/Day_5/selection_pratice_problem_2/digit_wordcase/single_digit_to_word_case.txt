@@ -1,0 +1,36 @@
+read a single digit no nd write the number in word using case
+
+#! /bin/bash
+echo "enter the single digit number: "
+read n
+case "$n" in
+0) echo "zero"
+;;
+1) echo "one"
+;;
+2) echo "two"
+;;
+3) echo "three"
+;;
+4) echo "four"
+;;
+5) echo "five"
+;;
+6) echo "six"
+;;
+7) echo "seven"
+;;
+8) echo "eight"
+;;
+9) echo "nine"
+;;
+*) echo "this is not a single digit no."
+;;
+esac
+
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./digittowordcase.sh
+enter the single digit number:
+3
+three

@@ -1,0 +1,40 @@
+2 .Write a program that takes day and month from the command line and prints true if day of month is
+between March 20 nd June 20,false otherwise.
+ 
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+#!/bin/bash -x
+date1="0319"
+date2="0621"
+echo "please enter the date in mmdd format:"
+read x
+if [ $x -gt $date1 -a $x -lt $date2 ]
+then
+        echo "true"
+else
+        echo "false"
+fi
+
+
+Output:
+$ ./checkday.sh
++ date1=0319
++ date2=0621
++ echo 'please enter the date in mmdd format:'
+please enter the date in mmdd format:
++ read x
+0922
++ '[' 0922 -gt 0319 -a 0922 -lt 0621 ']'
++ echo false
+false
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./checkday.sh
++ date1=0319
++ date2=0621
++ echo 'please enter the date in mmdd format:'
+please enter the date in mmdd format:
++ read x
+0620
++ '[' 0620 -gt 0319 -a 0620 -lt 0621 ']'
++ echo true
+true

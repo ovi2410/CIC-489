@@ -1,0 +1,54 @@
+Read a single digit number and write the number in word
+
+#! /bin/bash -x
+echo "enter the single digit no: "
+read n
+if [ $n -eq 0 ]
+then
+        echo "zero"
+elif [ $n -eq 1 ]
+then
+        echo "one"
+elif [ $n -eq 2 ]
+then
+        echo "two"
+elif [ $n -eq 3 ]
+then
+        echo "three"
+elif [ $n -eq 4 ]
+then
+        echo "four"
+elif [ $n -eq 5 ]
+then
+        echo "five"
+elif [ $n -eq 6 ]
+then
+        echo "six"
+elif [ $n -eq 7 ]
+then
+        echo "seven"
+elif [ $n -eq 8 ]
+then
+        echo "eight"
+elif [ $n -eq 9 ]
+then
+        echo "nine"
+else
+        echo "this is not single digit number."
+fi
+
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./singletoword.sh
++ echo 'enter the single digit no: '
+enter the single digit no:
++ read n
+4
++ '[' 4 -eq 0 ']'
++ '[' 4 -eq 1 ']'
++ '[' 4 -eq 2 ']'
++ '[' 4 -eq 3 ']'
++ '[' 4 -eq 4 ']'
++ echo four
+four
+

@@ -1,0 +1,30 @@
+#!/bin/bash -x
+
+echo "read the length of rectangular plot feet: "
+read l
+echo "read the bredth of rectangular plot feet: "
+read b
+a=$(($l * $b))
+echo "area of plot in feet $a"
+metercon=0.092903
+meter=$(awk 'BEGIN {print '$a' * '$metercon'}')
+echo "area in meters $meter"
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test1 (main)
+$ ./feettometer.sh
++ echo 'read the length of rectangular plot feet: '
+read the length of rectangular plot feet:
++ read l
+40
++ echo 'read the bredth of rectangular plot feet: '
+read the bredth of rectangular plot feet:
++ read b
+60
++ a=2400
++ echo 'area of plot in feet 2400'
+area of plot in feet 2400
++ metercon=0.092903
+++ awk 'BEGIN {print 2400 * 0.092903}'
++ meter=222.967
++ echo 'area in meters 222.967'
+area in meters 222.967
