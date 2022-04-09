@@ -1,0 +1,52 @@
+3.Take a number from user and check if the number is a Prime then show
+
+that its palindrome is also prime
+a. Write function check if number is Prime
+b. Write function to get the Palindrome.
+c. Check if the Palindrome number is also prime
+
+
+import java.util.Scanner;
+class paliendromeprimeno
+{
+        int m,n,rev,c;
+void accept()
+{
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter the lower limit: ");
+        m=sc.nextInt();
+        System.out.print("enter the upper limit: ");
+        n=sc.nextInt();
+}
+void prime_palin()
+{
+        int num,tmp,i;
+        System.out.print("the prime palindrome no.s are: ");
+        for(num=m;num<=n;num++)
+        {
+                c=0;
+                rev=0;
+                tmp=num;
+                {
+                if(tmp%i==0)
+                c++;
+        }
+        if(c==2)
+        {
+        while(tmp>0)
+        {
+                rev=rev*10+(tmp%10);
+                tmp/=10;
+        }
+        if(rev==num)
+                System.out.print(num+" ");
+        }
+}
+}
+        public static void main(String[] args)
+        {
+                paliendromeprimeno p=new paliendromeprimeno();
+                p.accept();
+                p.prime_palin();
+        }
+}

@@ -1,0 +1,19 @@
+1. Write a program in the following steps
+a. Generates 10 Random 3 Digit number.
+b. Store this random numbers into a array.
+c. Then find the 2nd largest and the 2nd smallest element without sorting the array.
+MAXCOUNT=10
+count=1
+
+while [ "$count" -le $MAXCOUNT ]; do
+ number[$count]=$RANDOM
+ let "count += 1"
+done
+
+echo "${number[@]}"
+
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./randomdigitno.sh
+3889 28288 19956 3536 28766 11160 10384 16684 24764 31440
+

@@ -1,0 +1,55 @@
+ 3. Extend the Flip Coin problem till either Heads or Tails wins 11 times.
+
+#!/bin/bash
+FLIP=$(($(($RANDOM%10))%2))
+if [ $FLIP -eq 1 ];then
+    echo "heads"
+else
+    echo "tails"
+fi
+
+output
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./headtail.sh
+tails
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./headtail.sh
+heads
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./headtail.sh
+heads
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./headtail.sh
+tails
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./headtail.sh
+tails
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./headtail.sh
+heads
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./headtail.sh
+heads
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./headtail.sh
+heads
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./headtail.sh
+heads
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./headtail.sh
+tails
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./headtail.sh
+tails

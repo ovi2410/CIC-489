@@ -1,0 +1,40 @@
+2. Write a function to check if the two numbers are Palindromes
+
+echo "Enter the number"
+read n
+function pal
+{
+number=$n
+reverse=0
+while [ $n -gt 0 ]
+do
+a=`expr $n % 10 `
+n=`expr $n / 10 `
+reverse=`expr $reverse \* 10 + $a`
+done
+echo $reverse
+if [ $number -eq $reverse ]
+then
+    echo "Number is palindrome"
+else
+    echo "Number is not palindrome"
+fi
+}
+r=`pal $n`
+echo "$r"
+
+output
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./twonopalindrome.sh
+Enter the number
+123
+321
+Number is not palindrome
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./twonopalindrome.sh
+Enter the number
+121
+121
+Number is palindrome

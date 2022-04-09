@@ -1,0 +1,21 @@
+ 2.Extend the above program to sort the array and then find the 2nd largest
+and the 2nd smallest element.
+
+#!/bin/bash
+
+arr=( -101 202 232 431 534 123 234 564 567 199 )
+
+min=0 max=0
+
+for i in ${arr[@]}; do
+    (( $i > max || max == 0)) && max=$i
+    (( $i < min || min == 0)) && min=$i
+done
+
+echo "min=$min
+max=$max"
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./secondlargesmall.sh
+min=-101
+max=567

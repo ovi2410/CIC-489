@@ -1,0 +1,19 @@
+5.Take a range from 0 – 100, find the digits that are repeated twice like 33, 77,
+  etc and store them in an array
+import java.util.*;
+
+public class TwoRepeatingSorting {
+
+    public static void twoRepeating(int [] A){
+        Arrays.sort(A);
+        System.out.print("Repeated Elements are: ");
+        for (int i = 0; i <A.length-1 ; i++) {
+            if(A[i]==A[i+1])
+                System.out.print(A[i] + " ");
+        }
+    }
+    public static void main(String[] args) {
+        int [] A = {11,44,22,33,44,66,77,11};
+        twoRepeating(A);
+    }
+}
