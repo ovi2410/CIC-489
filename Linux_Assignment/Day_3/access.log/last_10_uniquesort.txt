@@ -1,0 +1,15 @@
+Print list of last 10 unique sorted client IP from access.log
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/linux-content (master)
+$ cat access.log | awk '{print $1}' | sort -n | uniq -c | tail -10
+    323 10.56.21.2
+    251 10.56.22.3
+    214 10.56.3.4
+      9 10.56.34.4
+    242 10.56.4.2
+      7 10.56.44.4
+     40 10.56.46.2
+    168 10.56.5.2
+    285 10.56.6.4
+    186 10.56.9.3
+

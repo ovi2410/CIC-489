@@ -1,0 +1,8 @@
+print list of web response code count in the sorted order 
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/linux-content (master)
+$ cat access.log | awk '{print $9}'| sort -n | uniq -c
+   3176 200
+      8 206
+     26 304
+

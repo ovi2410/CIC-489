@@ -1,0 +1,17 @@
+9.Check if a folder exists or not.If its not present,create it. 
+
+read -p "enter the name of the folder u want to make" foldername
+if [ -d $foldername ]
+then
+        echo "folder already exists"
+else
+        mkdir $foldername
+        echo "making directory $foldername"
+fi
+
+
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ ./folderexistsornot.sh
+enter the name of the folder u want to make temp
+making directory temp

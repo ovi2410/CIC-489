@@ -1,0 +1,17 @@
+3.Append current date to all log filescname which has extension .log.1 from a folder
+
+#!/bin/bash
+for files in 'ls *.log.1'
+do
+        status=$?
+        if [ $status -ne 0 ]
+        then
+        echo "no files with extension log.1"
+        fi
+        filename='echo $files | awk -F. '{print $1}''
+        echo "renaming file $files"
+        TodayDate= date +"%d_%m_%Y"
+        newFile="$filename-$TodayDate.log.1"
+        mv $files $newFile
+done
+

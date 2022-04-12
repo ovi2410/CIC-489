@@ -1,0 +1,33 @@
+Print last 4 frequently access urls count in sorted order from access.log
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/linux-content (master)
+$ cat access.log | awk '{print $7}' | grep /assets | sort | uniq -c | sort -n
+      1 /assets/Off.svg
+      8 /assets/dustbin.png
+     21 /assets/outline-crop_square-24px.svg
+     22 /assets/icons8-delete%20(1).svg
+     22 /assets/outline-crop_16_9-24px.svg
+     29 /assets/baseline-clear-24px.svg
+     30 /assets/add-image.svg
+     30 /assets/redirect.svg
+     31 /assets/anynox.png
+     34 /assets/camera.svg
+     60 /assets/videocam.svg
+    106 /assets/launch.svg
+    108 /assets/Rectangle%2010.svg
+    109 /assets/loading.gif
+    109 /assets/play-button-02.png
+    110 /assets/copy.svg
+    110 /assets/ic_more_vert_24px.svg
+    111 /assets/Group%20441.svg
+    115 /assets/Group%20257.svg
+    115 /assets/arrow-point-to-right.png
+    175 /assets/XMLID_1201_.svg
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/linux-content (master)
+$ cat access.log | awk '{print $7}' | grep /assets | sort | uniq -c | sort -n | tail -4
+    111 /assets/Group%20441.svg
+    115 /assets/Group%20257.svg
+    115 /assets/arrow-point-to-right.png
+    175 /assets/XMLID_1201_.svg
+

@@ -1,0 +1,48 @@
+14. Data analysis / manipulation(Awk)
+
+
+i)
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/linux-content (master)
+$ cat data.csv | awk '{if($4>10000) print $2,$7}'
+EmployeeName TotalPay
+NATHANIEL 567595
+GARY 538909
+ALBERT 335279
+CHRISTOPHER 332343
+PATRICK 326373
+DAVID 316285
+ALSON 315981
+DAVID 307899
+JOANNE 302377
+PATRICIA 297608
+EDWARD 294580
+
+ii)
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/linux-content (master)
+$ cat data.csv | grep CAPTAIN | awk '{ print $2 " " $4}'
+GARY 155966
+ALBERT 212739
+PATRICIA 99722
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/linux-content (master)
+$ cat data.csv | grep CAPTAIN | awk '{ sum+=$4 }END{ print sum }'
+468427
+
+iii)
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/linux-content (master)
+$ cat data.csv | awk '{if($5>6000) print $3,$5}'
+JobTitle OvertimePay
+CAPTAIN 245131
+CAPTAIN 106088
+MECHANIC 56120
+DEPUTYCHIEF 9737
+ASSTDEPUTY 8601
+BATTALIONCHIEF 89062
+CAPTAIN 87082
+
+iv)
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/linux-content (master)
+$ cat data.csv | grep BasePay | awk '{ sum+=$5 }END{ print sum/NR }'
+
+
+

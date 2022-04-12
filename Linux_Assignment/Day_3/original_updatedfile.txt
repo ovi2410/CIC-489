@@ -1,0 +1,17 @@
+15.Find the difference between original file nd the updated file.
+   Apply changes to the original file.
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ diff -qr original/ updated/
+Only in original/: original-file.sh.txt
+Only in updated/: updated-file.sh.txt
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ cp -avr original/ original-backup
+'original/' -> 'original-backup'
+'original/original-file.sh.txt' -> 'original-backup/original-file.sh.txt'
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/BridgeLabz/test2 (main)
+$ diff -qr updated/ original-backup/
+Only in original-backup/: original-file.sh.txt
+Only in updated/: updated-file.sh.txt

@@ -1,0 +1,9 @@
+print list of last 4 frequneltly access unique urls at particluar hours
+
+DEEPAK@DESKTOP-AR2VFCL MINGW64 ~/OneDrive/Desktop/linux-content (master)
+$ cat access.log | awk '{print $4}{print $7}' | grep /assets | sort | uniq -c | sort -n | tail -4
+    111 /assets/Group%20441.svg
+    115 /assets/Group%20257.svg
+    115 /assets/arrow-point-to-right.png
+    175 /assets/XMLID_1201_.svg
+
